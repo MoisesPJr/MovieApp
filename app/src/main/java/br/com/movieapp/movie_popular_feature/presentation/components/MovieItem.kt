@@ -21,7 +21,7 @@ import coil.request.ImageRequest
 
 @Composable
 fun MovieItem(
-    modifier: Modifier,
+    modifier: Modifier = Modifier,
     voteAverage: Double,
     imageUrl: String,
     id: Int,
@@ -76,7 +76,7 @@ fun MovieItem(
 @Composable
 fun MovieItemPreview() {
 
-    MovieItem(modifier = Modifier,
+    MovieItem(
         voteAverage = 7.2,
         imageUrl = "",
         id = 1,
