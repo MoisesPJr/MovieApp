@@ -37,7 +37,7 @@ fun MovieRate(
         )
 
         Text(
-            rate.toString(),
+            "%.2f".format(rate),
             style = MaterialTheme.typography.body1,
             color = Color.White,
             fontSize = 10.sp
