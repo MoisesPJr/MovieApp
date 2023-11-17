@@ -47,11 +47,7 @@ fun MovieContent(
                         modifier = Modifier
                     )
                 }
-
             }
-
         }
     }
-
-
 }
