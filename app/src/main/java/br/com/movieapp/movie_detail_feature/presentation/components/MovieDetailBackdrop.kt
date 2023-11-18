@@ -1,6 +1,7 @@
 package br.com.movieapp.movie_detail_feature.presentation.components
 
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
@@ -25,7 +26,7 @@ fun MovieDetailBackdrop(
                 .build(),
             contentDescription = "",
             contentScale = ContentScale.Crop,
-            modifier = modifier
+            modifier = Modifier.fillMaxWidth()
         )
     }
 }
