@@ -6,7 +6,6 @@ import br.com.movieapp.core.domain.model.MovieSearch
 import kotlinx.coroutines.flow.Flow
 
 interface MovieSearchRepository {
-
     fun getSearchMovies(
         query: String,
         pagingConfig: PagingConfig

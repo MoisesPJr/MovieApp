@@ -27,7 +27,7 @@ class MovieSearchViewModel @Inject constructor(
                 query = query
             )
         ).cachedIn(viewModelScope)
-        uiState.copy(movies = movies)
+        uiState = uiState.copy(movies = movies)
     }
 
     fun event(event: MovieSearchEvent){

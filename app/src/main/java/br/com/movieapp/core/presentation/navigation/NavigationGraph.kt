@@ -7,6 +7,9 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import br.com.movieapp.movie_popular_feature.presentation.MoviePopularScreen
 import br.com.movieapp.movie_popular_feature.presentation.MoviePopularViewModel
+import br.com.movieapp.search_movie_feature.presentation.MovieSearchEvent
+import br.com.movieapp.search_movie_feature.presentation.MovieSearchScreen
+import br.com.movieapp.search_movie_feature.presentation.MovieSearchViewModel
 
 @Composable
 fun NavigationGraph(navController: NavHostController) {
@@ -27,7 +30,17 @@ fun NavigationGraph(navController: NavHostController) {
             )
         }
         composable(BottomNavItem.MovieSearch.route){
+            val viewmodel : MovieSearchViewModel = hiltViewModel()
+            val uiState = viewmodel.uiState
+            val onEvent: (MovieSearchEvent) -> Unit = viewmodel::event
+            val onFetch: (String) -> Unit = viewmodel::fetch
 
+            MovieSearchScreen(
+                uiState = uiState,
+                onEvent = onEvent,
+                onFetch = onFetch,
+                navigateToDetailMovie = {}
+            )
         }
         composable(BottomNavItem.MovieFavorite.route){
 

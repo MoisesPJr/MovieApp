@@ -35,8 +35,6 @@ class MovieSearchPagingSource(
                 prevKey = if(pageNumber == 1) null else pageNumber - 1,
                 nextKey = if(movies.isEmpty()) null else pageNumber + 1
             )
-
-
         }catch (exception: IOException) {
             exception.printStackTrace()
             return LoadResult.Error(exception)
