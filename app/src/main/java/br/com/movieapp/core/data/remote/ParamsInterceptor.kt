@@ -1,4 +1,4 @@
-package br.com.movieapp.core.remote
+package br.com.movieapp.core.data.remote
 
 import br.com.movieapp.BuildConfig
 import br.com.movieapp.core.util.Constants

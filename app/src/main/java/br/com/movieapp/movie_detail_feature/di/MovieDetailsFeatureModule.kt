@@ -1,6 +1,6 @@
 package br.com.movieapp.movie_detail_feature.di
 
-import br.com.movieapp.core.remote.MovieService
+import br.com.movieapp.core.data.remote.MovieService
 import br.com.movieapp.movie_detail_feature.data.repository.MovieDetailsRepositoryImpl
 import br.com.movieapp.movie_detail_feature.data.source.MovieDetailsRemoteDataSourceImpl
 import br.com.movieapp.movie_detail_feature.domain.repository.MovieDetailsRepository

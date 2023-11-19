@@ -1,7 +1,5 @@
 package br.com.movieapp.core.domain.model
 
-import br.com.movieapp.core.remote.model.Genre
-
 data class MovieDetails(
     val id: Int,
     val title:String,

@@ -1,6 +1,6 @@
-package br.com.movieapp.core.remote.response
+package br.com.movieapp.core.data.remote.response
 
-import br.com.movieapp.core.remote.model.SearchResult
+import br.com.movieapp.core.data.remote.model.SearchResult
 import com.google.gson.annotations.SerializedName
 
 data class SearchResponse(

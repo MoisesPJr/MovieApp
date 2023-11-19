@@ -1,8 +1,8 @@
-package br.com.movieapp.core.remote
+package br.com.movieapp.core.data.remote
 
-import br.com.movieapp.core.remote.response.MovieDetailResponse
-import br.com.movieapp.core.remote.response.MovieResponse
-import br.com.movieapp.core.remote.response.SearchResponse
+import br.com.movieapp.core.data.remote.response.MovieDetailResponse
+import br.com.movieapp.core.data.remote.response.MovieResponse
+import br.com.movieapp.core.data.remote.response.SearchResponse
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query
@@ -12,18 +12,18 @@ interface MovieService {
     @GET("movie/popular")
     suspend fun getPopularMovies(
         @Query("page") page: Int
-    ):MovieResponse
+    ): MovieResponse
 
     @GET("search/multi")
     suspend fun searchMovie(
         @Query("page") page: Int,
         @Query("query") query: String
-    ):SearchResponse
+    ): SearchResponse
 
     @GET("movie/{movie_id}")
     suspend fun getMovie(
         @Path("movie_id") movieId: Int
-    ):MovieDetailResponse
+    ): MovieDetailResponse
 
 
     @GET("movie/{movie_id}/similar")

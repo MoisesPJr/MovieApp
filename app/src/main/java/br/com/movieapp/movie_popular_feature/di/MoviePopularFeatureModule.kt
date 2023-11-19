@@ -1,6 +1,6 @@
 package br.com.movieapp.movie_popular_feature.di
 
-import br.com.movieapp.core.remote.MovieService
+import br.com.movieapp.core.data.remote.MovieService
 import br.com.movieapp.movie_popular_feature.data.repository.MoviePopularRepositoryImpl
 import br.com.movieapp.movie_popular_feature.data.source.MoviePopularRemoteDataSourceImpl
 import br.com.movieapp.movie_popular_feature.domain.repository.MoviePopularRepository

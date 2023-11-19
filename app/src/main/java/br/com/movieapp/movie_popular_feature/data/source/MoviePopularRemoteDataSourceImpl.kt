@@ -1,8 +1,8 @@
 package br.com.movieapp.movie_popular_feature.data.source
 
 import br.com.movieapp.core.paging.MoviePagingSource
-import br.com.movieapp.core.remote.MovieService
-import br.com.movieapp.core.remote.response.MovieResponse
+import br.com.movieapp.core.data.remote.MovieService
+import br.com.movieapp.core.data.remote.response.MovieResponse
 import br.com.movieapp.movie_popular_feature.domain.source.MoviePopularRemoteDataSource
 import javax.inject.Inject
 

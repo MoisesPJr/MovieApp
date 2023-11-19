@@ -1,9 +1,8 @@
 package br.com.movieapp.core.di
 
 import br.com.movieapp.BuildConfig
-import br.com.movieapp.core.remote.MovieService
-import br.com.movieapp.core.remote.ParamsInterceptor
-import com.google.gson.Gson
+import br.com.movieapp.core.data.remote.MovieService
+import br.com.movieapp.core.data.remote.ParamsInterceptor
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -61,7 +60,7 @@ object NetworkModule {
     fun provideMovieService(
         client: OkHttpClient,
         converterFactory: GsonConverterFactory
-    ): MovieService{
+    ): MovieService {
         return Retrofit.Builder()
             .baseUrl(BuildConfig.BASE_URL)
             .client(client)

@@ -2,7 +2,7 @@ package br.com.movieapp.movie_detail_feature.domain.source
 
 import br.com.movieapp.core.domain.model.MovieDetails
 import br.com.movieapp.core.paging.MovieSimilarPagingSource
-import br.com.movieapp.core.remote.response.MovieResponse
+import br.com.movieapp.core.data.remote.response.MovieResponse
 
 interface MovieDetailsRemoteDataSource {
 

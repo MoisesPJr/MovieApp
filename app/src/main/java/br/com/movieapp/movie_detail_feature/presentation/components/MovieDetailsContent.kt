@@ -95,6 +95,7 @@ fun MovieDetailsContent(
 
             Spacer(modifier = Modifier.height(8.dp))
 
+
             FlowRow(
                 mainAxisSpacing = 10.dp,
                 mainAxisAlignment = MainAxisAlignment.Center,
@@ -128,15 +129,6 @@ fun MovieDetailsContent(
             )
             Spacer(modifier = Modifier.height(15.dp))
 
-            Text(
-                text = stringResource(R.string.movies_similar),
-                color = white,
-                fontFamily = FontFamily.SansSerif,
-                fontWeight = FontWeight.ExtraBold,
-                fontSize = 20.sp,
-                modifier = Modifier.align(alignment = Alignment.Start)
-                    .padding(horizontal = 8.dp)
-            )
         }
 
         if (isError.isNotEmpty()) {
@@ -157,14 +149,26 @@ fun MovieDetailsContent(
             )
         }
 
-        MovieDetailSimilarMovies(
-            pagingMoviesSimilar = pagingMoviesSimilar,
-            modifier = Modifier
-                .fillMaxWidth()
-                .fillMaxHeight(0.35f)
-                .align(Alignment.BottomEnd)
+        Column(modifier = Modifier.align(Alignment.BottomEnd).fillMaxWidth()) {
 
-        )
+            Text(
+                text = stringResource(R.string.movies_similar),
+                color = white,
+                fontFamily = FontFamily.SansSerif,
+                fontWeight = FontWeight.ExtraBold,
+                fontSize = 20.sp,
+                modifier = Modifier.align(alignment = Alignment.Start)
+                    .padding(horizontal = 8.dp)
+            )
+            Spacer(modifier = Modifier.height(8.dp))
+
+            MovieDetailSimilarMovies(
+                pagingMoviesSimilar = pagingMoviesSimilar,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .fillMaxHeight(0.35f)
+            )
+        }
 
     }
 

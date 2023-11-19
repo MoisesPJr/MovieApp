@@ -1,7 +1,7 @@
 package br.com.movieapp.search_movie_feature.domain.source
 
 import br.com.movieapp.core.paging.MovieSearchPagingSource
-import br.com.movieapp.core.remote.response.SearchResponse
+import br.com.movieapp.core.data.remote.response.SearchResponse
 
 interface MovieSearchRemoteDataSource {
 
